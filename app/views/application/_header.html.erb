@@ -17,6 +17,16 @@
 			<li><%= link_to "Sport" %></li>
 			<li><a href="#">|</a></li>
 
+			<% if user_signed_in? && current_user.name == "rich" %>
+				<li class="has-dropdown"><%= link_to "Edit" %>
+					<ul>
+						<li>List item</li>
+						<li>List item</li>
+						<li>List item</li>
+					</ul>
+				</li>
+			<% end %>
+
 			<% if user_signed_in? %>
 
 				<li class="has-dropdown">
@@ -25,7 +35,7 @@
 						 	<li><%= link_to "My Account", edit_user_registration_path %></li>
 						 	<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 						</ul>
-				</li>				
+				</li>		
 			<% else %> 
 				<li><%= link_to "Log in", new_user_session_path %></li>
 				<li><%= link_to "Sign up", new_user_registration_path %></li>
