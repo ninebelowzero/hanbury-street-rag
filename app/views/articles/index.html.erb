@@ -1,1 +1,28 @@
-<h1>Articles index page</h1>
+<h1 class="masthead">Bay City News</h1>
+
+
+<div class="row">
+  <div class="medium-4 columns">
+
+        <% @articles.each do |article| %>
+        
+            <% if article.id.odd? %>
+                <h3><%= link_to article.title, article %></h3>
+                <p><%= (article.content.slice(0,250) + "...") %></p>
+            <% end %>
+        <% end %>
+    </div>
+
+    <div class="medium-4 columns">
+    
+        <% @articles.each do |article| %>
+         <% if article.id.even? %>
+                <h3><%= link_to article.title, article %></h3>
+                <p><%= (article.content.slice(0,250) + "...") %></p>
+            <% end %>
+        <% end %>
+    </div>
+
+    <div class="medium-4 columns">ADS TO GO HERE</div>
+
+</div>
