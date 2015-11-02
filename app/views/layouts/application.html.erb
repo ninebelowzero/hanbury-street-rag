@@ -6,6 +6,7 @@
 
 		<title>Hanbury Street Rag</title>
 
+		<link href='https://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
 		<%= stylesheet_link_tag    "application" %>
 		<%= javascript_include_tag "vendor/modernizr" %>
 		<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -21,9 +22,9 @@
 			<p class="alert"><%= alert %></p>
 		</div>
 
-		<main>
+		<div class="row">
 			<%= yield %>
-		</main>
+		</div>
 
 	</body>
 </html>
