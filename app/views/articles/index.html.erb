@@ -1,4 +1,4 @@
-<h1 class="masthead">Bay City News</h1>
+<h1 class="masthead">Hanbury Street Rag</h1>
 
 
 <div class="row">
@@ -7,8 +7,8 @@
         <% @articles.each do |article| %>
         
             <% if article.id.odd? %>
-                <h3><%= link_to article.title, article %></h3>
-                <p><%= (article.content.slice(0,250) + "...") %></p>
+                <h3><%= link_to article.headline, article %></h3>
+                <p><%= article.standfirst %></p>
             <% end %>
         <% end %>
     </div>
@@ -17,8 +17,8 @@
     
         <% @articles.each do |article| %>
          <% if article.id.even? %>
-                <h3><%= link_to article.title, article %></h3>
-                <p><%= (article.content.slice(0,250) + "...") %></p>
+                <h3><%= link_to article.headline, article %></h3>
+                <p><%= article.standfirst %></p>
             <% end %>
         <% end %>
     </div>
