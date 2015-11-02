@@ -15,9 +15,16 @@ include Faker
 	article = Article.create ({ headline: Lorem.words(7, true).join(" ").capitalize,
 															standfirst: Lorem.sentence(10, true, 10),
 															content: Lorem.paragraphs(8, true).join("\n"),
-															image_path: Avatar.image("placeholder image", "450x315"),
-															thumbnail_path: Avatar.image("thumbnail image", "100x100")
+															image_path: "http://lorempixel.com/600/500",
+															thumbnail_path: "http://lorempixel.com/100/100"
 
-		})
+	})
 	p article.inspect
+end
+
+10.times do
+	ad = Ad.create ({ image_path: "http://placehold.it/310x500"
+
+	})
+	p ad.inspect
 end

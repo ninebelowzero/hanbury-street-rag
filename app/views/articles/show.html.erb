@@ -4,14 +4,18 @@
 
 		<h1><%= @article.headline %></h1>		
 		<h5><%= @article.standfirst %></h5>		
-		<%= image_tag(@article.image_path) %>
+		<%= image_tag(@article.image_path, size:"450x315") %>
 		<br>		
 		<br>		
 		<%= @article.content %>
 		
 	</div>
 	<div class="medium-4 columns">
-		ADS GO HERE
+		<br>
+		<%= image_tag(@ads[0].image_path, size: "310x500") %>
+		<br>
+		<br>
+		<%= image_tag(@ads[1].image_path, size: "310x500") %>
 	</div>
 
 
