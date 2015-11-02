@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :articles
-  devise_for :users
+  devise_for :users, controllers: {sessions: "sessions", registrations: "registrations" }
   root "articles#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
