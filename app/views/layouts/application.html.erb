@@ -15,15 +15,17 @@
 
 	<body>
 
-	<%= render "header" %>
-
-		<div class="message_box">
-			<p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
-		</div>
-
+		<%= render "header" %>
+	
 		<div class="row">
+
+			<div class="message_box">
+				<p class="notice"><%= notice %></p>
+				<p class="alert"><%= alert %></p>
+			</div>
+
 			<%= yield %>
+		
 		</div>
 
 	</body>
