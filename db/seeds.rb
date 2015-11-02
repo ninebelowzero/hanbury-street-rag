@@ -14,8 +14,8 @@ include Faker
 20.times do
 	article = Article.create ({ headline: Lorem.words(7, true).join(" ").capitalize,
 															standfirst: Lorem.sentence(10, true, 10),
-															content: Lorem.paragraphs(8, true).join("<br"),
-															image_path: Avatar.image("placeholder image", "315x450"),
+															content: Lorem.paragraphs(8, true).join("\n"),
+															image_path: Avatar.image("placeholder image", "450x315"),
 															thumbnail_path: Avatar.image("thumbnail image", "100x100")
 
 		})

@@ -7,7 +7,8 @@
         <% @articles.each do |article| %>
         
             <% if article.id.odd? %>
-                <h3><%= link_to article.headline, article %></h3>
+                <%= image_tag(article.thumbnail_path) %>
+                <h4><%= link_to article.headline, article %></h4>
                 <p><%= article.standfirst %></p>
             <% end %>
         <% end %>
@@ -17,7 +18,7 @@
     
         <% @articles.each do |article| %>
          <% if article.id.even? %>
-                <h3><%= link_to article.headline, article %></h3>
+                <h4><%= link_to article.headline, article %></h4>
                 <p><%= article.standfirst %></p>
             <% end %>
         <% end %>
