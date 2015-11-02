@@ -1,0 +1,22 @@
+<%= form_for(@article) do |f| %>
+
+  <div class="field">
+    <%= f.label :headline %><br>
+    <%= f.text_field :headline %>
+  </div>
+  <div class="field">
+    <%= f.label :standfirst %><br>
+    <%= f.text_field :standfirst %>
+  </div>
+  <div class="field">
+    <%= f.label :image_path %><br>
+    <%= f.text_field :image_path %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Publish", class: "button radius" %>
+  </div>
+<% end %>

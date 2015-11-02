@@ -17,17 +17,17 @@
 			<li><%= link_to "Sport" %></li>
 			<li><a href="#">|</a></li>
 
-			<%# if user_signed_in? && current_user.name == "Rich" %>
+			<% if user_signed_in? && current_user.name == "Rich" %>
 				<li class="has-dropdown">
 					<a href="#">Editor Options</a>
 					<ul class="dropdown">
-						<li><%= link_to "Edit Page" %></li>
-						<li><%= link_to "New Article" %></li>
+						<li><%#= link_to "Edit Page", edit_article_path %></li>
+						<li><%= link_to "New Article", new_article_path %></li>
 						<li><%= link_to "Layout" %></li>
 						<li><%= link_to "Ads" %></li>
 					</ul>
 				</li>
-			<%# end %>
+			<% end %>
 
 			<% if user_signed_in? %>
 

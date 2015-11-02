@@ -13,20 +13,32 @@ class ArticlesController < ApplicationController
 	end
 
 	def new
-		@articles = Article.new
+		@article = Article.new
 	end
 
 	def edit
 	end
 
 	def create
-
+		@article = Article.new(article_params)
+		if @article.save
+			redirect_to @article, notice: "Article was successfully created."
+		else
+			render "new", notice: @article.errors.full_messages
+		end
 	end
 
 	def update
+		if @article.save
+			redirect_to @article, notice: "Article was successfully changed."
+		else
+			render "edit", notice: @article.errors.full_messages
+		end
 	end
 
 	def destroy
+		@article.destroy
+		redirect_to root_path, notice: "Article has been deleted."
 	end
 
 

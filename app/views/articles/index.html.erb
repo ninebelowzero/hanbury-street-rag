@@ -5,7 +5,7 @@
   <div class="medium-4 columns">
 
   	<% i = 0 %> 
-		<% @articles.each do |article| %>
+		<% @articles.reverse.each do |article| %>
 				<% unless i > 7 %>		
 					<%= image_tag(article.image_path, size: "100x100") %>
 					<h4><%= link_to article.headline, article %></h4>
