@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102123308) do
+ActiveRecord::Schema.define(version: 20151103100416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,34 @@ ActiveRecord::Schema.define(version: 20151102123308) do
     t.text     "thumbnail_path"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  create_table "articles_regions", id: false, force: :cascade do |t|
+    t.integer "article_id", null: false
+    t.integer "region_id",  null: false
+  end
+
+  add_index "articles_regions", ["article_id"], name: "index_articles_regions_on_article_id", using: :btree
+  add_index "articles_regions", ["region_id"], name: "index_articles_regions_on_region_id", using: :btree
+
+  create_table "articles_topics", id: false, force: :cascade do |t|
+    t.integer "article_id", null: false
+    t.integer "topic_id",   null: false
+  end
+
+  add_index "articles_topics", ["article_id"], name: "index_articles_topics_on_article_id", using: :btree
+  add_index "articles_topics", ["topic_id"], name: "index_articles_topics_on_topic_id", using: :btree
+
+  create_table "regions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

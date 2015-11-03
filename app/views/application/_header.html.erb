@@ -21,7 +21,9 @@
 				<li class="has-dropdown">
 					<a href="#">Editor Options</a>
 					<ul class="dropdown">
-						<li><%#= link_to "Edit Page", edit_article_path %></li>
+						<% if @article && @article.id %>
+							<li><%= link_to "Edit Page", edit_article_path(@article) %></li>
+						<% end %>
 						<li><%= link_to "New Article", new_article_path %></li>
 						<li><%= link_to "Layout" %></li>
 						<li><%= link_to "Ads" %></li>

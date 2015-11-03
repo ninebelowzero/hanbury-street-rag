@@ -9,7 +9,7 @@
 		<link href='https://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
 		<%= stylesheet_link_tag    "application" %>
 		<%= javascript_include_tag "vendor/modernizr" %>
-		<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
 	</head>
 
@@ -17,6 +17,8 @@
 
 		<%= render "header" %>
 	
+		<div class="debugger-box">@article = <%= @article.inspect %></div>
+
 		<div class="row">
 
 			<div class="message_box">

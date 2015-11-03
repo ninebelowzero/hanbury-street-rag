@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def update
-		if @article.save
+		if @article.update_attributes(article_params)
 			redirect_to @article, notice: "Article was successfully changed."
 		else
 			render "edit", notice: @article.errors.full_messages
@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
 		end
 
 		def article_params
-			params.require(:article).permit(:headline, :standfirst, :content, :image_path, :thumbnail_path)
+			params.require(:article).permit(:headline, :standfirst, :content, :image_path)
 		end
 
 end
