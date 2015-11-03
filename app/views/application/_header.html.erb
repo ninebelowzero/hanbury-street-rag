@@ -18,7 +18,7 @@
 			<li class="has-dropdown">
 				<a href="#">Regions</a>
 					<ul class="dropdown">
-						<%= Region.all.each do |region| %>
+						<% Region.all.each do |region| %>
 							<li><%= link_to region.name, region %></li>
 						<% end %>
 					</ul>
