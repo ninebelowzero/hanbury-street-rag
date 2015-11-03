@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
 		end
 
 		def article_params
-			params.require(:article).permit(:headline, :standfirst, :content, :image_path)
+			params.require(:article).permit(:headline, :standfirst, :content, :image_path, topic_ids:[])
 		end
 
 end

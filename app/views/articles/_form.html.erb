@@ -28,6 +28,14 @@
 		<%= f.label :content %><br>
 		<%= f.text_area :content %>
 	</div>
+
+	<div class="field">
+	  <% Topic.all.each do |topic| %>
+	  <%= check_box_tag "article[topic_ids][]", topic.id, @article.topic_ids.include?(topic.id), id: "article_#{topic.id}" %> 
+	    <label for="article_<%= topic.id %>"><%= topic.name %></label><br>
+	  <% end %>
+	</div>
+
 	<div class="actions">
 		<%= f.submit "Publish", class: "button radius" %>
 	</div>
