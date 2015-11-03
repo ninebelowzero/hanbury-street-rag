@@ -3,11 +3,16 @@ class TopicsController < ApplicationController
 	before_action :set_topic, only: [:destroy]
 
   def index
-
   end
 
-	def show
-	end
+  def create
+    @topic = Topic.new(topic_params)
+    if @topic.save
+      redirect_to topics_path, notice: "Topic created."
+    else
+      redirect_to topics_path, notice: "Update failed."
+    end
+  end
 
   def destroy
     @topic.destroy
