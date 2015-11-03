@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :articles
+  resources :topics
   devise_for :users, controllers: {sessions: "sessions", registrations: "registrations" }
   root "articles#index"
 
