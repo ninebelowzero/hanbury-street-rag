@@ -8,7 +8,7 @@
 
     <% Article.all.each do |article| %>
       <% if article.region_ids.include?(@region.id) %>
-        <%= image_tag(article.image_path, size: "100x100") %>
+        <%= image_tag(article.image.thumb.url) %>
         <h4><%= link_to article.headline, article %></h4>
         <p><%= article.standfirst %></p>
       <% end %>

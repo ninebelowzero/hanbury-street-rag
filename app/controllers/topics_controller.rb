@@ -1,8 +1,11 @@
 class TopicsController < ApplicationController
 
-	before_action :set_topic, only: [:destroy]
+	before_action :set_topic, only: [:show, :destroy]
 
   def index
+  end
+
+  def show
   end
 
   def create
