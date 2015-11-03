@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :ads
   resources :articles
   resources :topics
   resources :regions

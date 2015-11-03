@@ -6,10 +6,10 @@ class AdsController < ApplicationController
 		@ads = Ad.all
 	end
 	
-	def show
-	
+	def destroy
+		@ad.destroy
+		redirect_to ads_path, notice: "Ad has been deleted."
 	end
-	
 	
 	
 	private
