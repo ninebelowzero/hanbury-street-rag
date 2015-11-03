@@ -12,8 +12,17 @@
 		<ul class="right">
 
 			<% Topic.all.each do |topic| %>
-				<li><%= link_to topic.name, topic %>
+				<li><%= link_to topic.name, topic %></li>
 			<% end %> 
+
+			<li class="has-dropdown">
+				<a href="#">Regions</a>
+					<ul class="dropdown">
+						<%= Region.all.each do |region| %>
+							<li><%= link_to region.name, region %></li>
+						<% end %>
+					</ul>
+			</li>
 
 			<% if user_signed_in? && current_user.name == "Rich" %>
 				<li class="has-dropdown">

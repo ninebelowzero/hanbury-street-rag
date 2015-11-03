@@ -1,0 +1,22 @@
+<div class="row">
+
+  <%= render "masthead" %>
+
+  <div class="medium-8 columns">
+
+    <h1><%= @region.name %></h1>
+
+    <% Article.all.each do |article| %>
+      <% if article.region_ids.include?(@region.id) %>
+        <%= image_tag(article.image_path, size: "100x100") %>
+        <h4><%= link_to article.headline, article %></h4>
+        <p><%= article.standfirst %></p>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="medium-4 columns">
+    <%= render "ads" %>
+  </div>
+
+</div>

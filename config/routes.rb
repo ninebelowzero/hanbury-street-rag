@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :topics
+  resources :regions
   devise_for :users, controllers: {sessions: "sessions", registrations: "registrations" }
   root "articles#index"
 
