@@ -5,8 +5,8 @@
 		<h1><%= @article.headline %></h1>		
 		<h5><%= @article.standfirst %></h5>		
 		<%= image_tag(@article.image.url, size:"450x315") %>
-		<br>		
-		<br>		
+		<p><%= @article.caption %></p>
+		<p>by <%= @article.author %></p>
 		<%= @article.content %>
 		
 	</div>
