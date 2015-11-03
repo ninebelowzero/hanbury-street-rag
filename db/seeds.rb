@@ -7,33 +7,33 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+
 require "faker"
 
 include Faker
 
-# 20.times do
-# 	article = Article.create ({ headline: Lorem.words(7, true).join(" ").capitalize,
-# 															standfirst: Lorem.sentence(10, true, 10),
-# 															content: Lorem.paragraphs(8, true).join("\n"),
-# 															image_path: "http://lorempixel.com/600/500",
-# 															thumbnail_path: "http://lorempixel.com/100/100"
-
-# 	})
-# 	p article.inspect
-# end
+20.times do
+	article = Article.create ({ headline: Lorem.words(7, true).join(" ").capitalize,
+															standfirst: Lorem.sentence(10, true, 10),
+															content: Lorem.paragraphs(8, true).join("\n"),
+															image: "abstract.jpg",
+                              image_path: "http://something"
+	})
+	p article.inspect
+end
 
 # 10.times do
 # 	ad = Ad.create ({ image_path: "http://placehold.it/310x500"
 
 # 	})
-# 	p ad.inspect
+# 	# p ad.inspect
 # end
 
 
 # topic = Topic.create ({ name: "Politics" })
-# topic = Topic.create ({ name: "World" })
 # topic = Topic.create ({ name: "Culture" })
 # topic = Topic.create ({ name: "Opinion" })
+# topic = Topic.create ({ name: "Science" })
 # topic = Topic.create ({ name: "Business" })
 # topic = Topic.create ({ name: "Sport" })
 
