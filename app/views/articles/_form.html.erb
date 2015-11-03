@@ -29,26 +29,40 @@
 		<%= f.text_area :content %>
 	</div>
 
-	<div class="field">
-		<% Topic.all.each do |topic| %>
-		<%= check_box_tag "article[topic_ids][]", topic.id, @article.topic_ids.include?(topic.id), id: "article_#{topic.id}" %> 
-			<label for="article_<%= topic.id %>"><%= topic.name %></label><br>
-		<% end %>
+	<div class="row">
+		<div class="medium-6 columns">
+			<div class="field">
+				<p>Topics:</p>
+				<% Topic.all.each do |topic| %>
+				<%= check_box_tag "article[topic_ids][]", topic.id, @article.topic_ids.include?(topic.id)	, 	id: "article_#{topic.id}" %> 
+					<label for="article_<%= topic.id %>"><%= topic.name %></label><br>
+				<% end %>
+			</div>
+		</div>
+	
+		<div class="medium-6 columns">
+			<div class="field">
+				<p>Regions:</p>
+				<% Region.all.each do |region| %>
+				<%= check_box_tag "article[region_ids][]", region.id, @article.region_ids.include?(region	.	id), id: "article_#{region.id}" %> 
+					<label for="article_<%= region.id %>"><%= region.name %></label><br>
+				<% end %>
+			</div>
+		</div>
 	</div>
+	
+	<br>
 
-	<div class="field">
-		<% Region.all.each do |region| %>
-		<%= check_box_tag "article[region_ids][]", region.id, @article.region_ids.include?(region.id), id: "article_#{region.id}" %> 
-			<label for="article_<%= region.id %>"><%= region.name %></label><br>
-		<% end %>
+	<div class="row">
+		<div class="actions medium-6 columns">
+			<%= f.submit "Publish", class: "button radius" %>
+		</div>
+	
+		<div class="medium-6 columns">
+			<% if @article.id != nil %>
+				<%= link_to "Remove", article_path, method: :delete, class: "button radius" %>
+			<% end %>
+		</div>
 	</div>
-
-	<div class="actions">
-		<%= f.submit "Publish", class: "button radius" %>
-	</div>
-
-	<% if @article.id != nil %>
-		<%= link_to "Remove", article_path, method: :delete, class: "button radius" %>
-	<% end %>
 
 <% end %>

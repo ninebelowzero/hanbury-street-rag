@@ -1,3 +1,3 @@
 class RegistrationsController < Devise::RegistrationsController
-	# layout "forms"
+	layout "forms"
 end

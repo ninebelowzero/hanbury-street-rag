@@ -1,3 +1,3 @@
 class SessionsController < Devise::SessionsController
-	# layout "forms"
+	layout "forms"
 end
