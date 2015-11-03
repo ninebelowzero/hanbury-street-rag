@@ -7,7 +7,7 @@
   	<% i = 0 %> 
 		<% @articles.reverse.each do |article| %>
 				<% unless i > 7 %>		
-					<%= image_tag(article.image_path, size: "100x100") %>
+					<%= image_tag(article.image.url, size: "200x150") %>
 					<h4><%= link_to article.headline, article %></h4>
 					<p><%= article.standfirst %></p>
 				<% end %>
@@ -20,7 +20,7 @@
   	<% i = 0 %> 
 		<% @articles.each do |article| %>
 				<% unless i > 7 %>		
-					<%= image_tag(article.image_path, size: "100x100") %>
+					<%= image_tag(article.image.url, size: "200x150") %>
 					<h4><%= link_to article.headline, article %></h4>
 					<p><%= article.standfirst %></p>
 				<% end %>
