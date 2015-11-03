@@ -30,10 +30,17 @@
 	</div>
 
 	<div class="field">
-	  <% Topic.all.each do |topic| %>
-	  <%= check_box_tag "article[topic_ids][]", topic.id, @article.topic_ids.include?(topic.id), id: "article_#{topic.id}" %> 
-	    <label for="article_<%= topic.id %>"><%= topic.name %></label><br>
-	  <% end %>
+		<% Topic.all.each do |topic| %>
+		<%= check_box_tag "article[topic_ids][]", topic.id, @article.topic_ids.include?(topic.id), id: "article_#{topic.id}" %> 
+			<label for="article_<%= topic.id %>"><%= topic.name %></label><br>
+		<% end %>
+	</div>
+
+	<div class="field">
+		<% Region.all.each do |region| %>
+		<%= check_box_tag "article[region_ids][]", region.id, @article.region_ids.include?(region.id), id: "article_#{region.id}" %> 
+			<label for="article_<%= region.id %>"><%= region.name %></label><br>
+		<% end %>
 	</div>
 
 	<div class="actions">
