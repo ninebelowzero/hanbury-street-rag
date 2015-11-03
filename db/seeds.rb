@@ -37,11 +37,11 @@ include Faker
 # topic = Topic.create ({ name: "Business" })
 # topic = Topic.create ({ name: "Sport" })
 
-region = Region.create ({ name: "UK" })
-region = Region.create ({ name: "Europe" })
-region = Region.create ({ name: "Americas" })
-region = Region.create ({ name: "Africa & Middle East" })
-region = Region.create ({ name: "Asia-Pacific" })
+# region = Region.create ({ name: "UK" })
+# region = Region.create ({ name: "Europe" })
+# region = Region.create ({ name: "Americas" })
+# region = Region.create ({ name: "Africa & Middle East" })
+# region = Region.create ({ name: "Asia-Pacific" })
 
 
 
