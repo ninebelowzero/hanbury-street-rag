@@ -60,7 +60,7 @@
 	
 		<div class="medium-6 columns">
 			<% if @article.id != nil %>
-				<%= link_to "Remove", article_path, method: :delete, class: "button radius" %>
+				<%= link_to "Remove", article_path, method: :delete, data: { confirm: "Are you sure you want to delete this article?" } , class: "button radius" %>
 			<% end %>
 		</div>
 	</div>
