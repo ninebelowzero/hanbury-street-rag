@@ -5,6 +5,11 @@ class AdsController < ApplicationController
 	def index
 		@ads = Ad.all
 	end
+
+	def update
+		@ad.update_attributes(ad_params)
+		redirect_to ads_path, notice: "Ad updated."
+	end
 	
 	def destroy
 		@ad.destroy
@@ -19,7 +24,7 @@ class AdsController < ApplicationController
 		end
 	
 		def ad_params
-			params.require(:ad).permit(:image_path)
+			params.require(:ad).permit(:image_path, :link_path)
 		end
 
 end
