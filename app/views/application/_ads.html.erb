@@ -1,9 +1,8 @@
 <% 3.times do %>
 
 	<% ad = Ad.all.to_a.sample %>
-
-	<br>
 	<%= link_to (image_tag(ad.image_path, size: "310x500")), ad.link_path %>
 	<br>
+  <br>
 
 <% end %>

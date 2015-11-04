@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 		@articles = Article.all
 		@search = Article.search(params[:q])
 		@articles = @search.result
+		@top_article = Article.first
 	end
 
 	def show
