@@ -14,21 +14,25 @@
 			<br>
 			<br>
 	
-			<p><b>Comments:</b>
-			<% if @article.comments %>
-				<% @article.comments.reverse.each do |comment| %>
+			<p>
+			<% if @article.comments.count > 0 %>
+			<b><%= @article.comments.count %> comments:</b>
+
+				<% @article.comments.each do |comment| %>
 					<p><b><%= comment.title %></b></p>
-					<p><i>by <%= comment.user_id %></i></p>
+					<%# writer = comment.user_id %>
+					<p><i>by <%#= User.find_by(id: writer.to_i).username %></i></p>
 					<p><%= comment.comment %></p>
 					<hr>
 				<% end %>
+
+				<b><%= current_user.name %> - add a comment to this article:</b>
 			<% else %>
 				<b>Be the first to comment on this article.</b>
 			<% end %>
 			</p>
 	
 			<p>
-				<b><%= current_user.name %> - add a comment to this article:</b>
 				<%= form_tag "/articles/#{@article.id}/add_new_comment" do %>
 					<%= hidden_field_tag "id", :id %>
 					<%= text_field_tag "comment[title]" %>
