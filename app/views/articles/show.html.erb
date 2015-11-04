@@ -7,27 +7,42 @@
 		<%= image_tag(@article.image.url, size:"450x315") %>
 		<p><%= @article.caption %></p>
 		<p>by <%= @article.author %></p>
-		<%= @article.content %>
-		<br>
-		<br>
 
-		<p>Comments:
-		<% if @article.comments %>
-			<% @article.comments.each do |comment| %>
-				<p><%= comment.comment %></p>
+		<% if user_signed_in? %>
+
+			<%= @article.content %>
+			<br>
+			<br>
+	
+			<p><b>Comments:</b>
+			<% if @article.comments %>
+				<% @article.comments.reverse.each do |comment| %>
+					<p><b><%= comment.title %></b></p>
+					<p><i>by <%= comment.user_id %></i></p>
+					<p><%= comment.comment %></p>
+					<hr>
+				<% end %>
+			<% else %>
+				<b>Be the first to comment on this article.</b>
 			<% end %>
+			</p>
+	
+			<p>
+				<b><%= current_user.name %> - add a comment to this article:</b>
+				<%= form_tag "/articles/#{@article.id}/add_new_comment" do %>
+					<%= hidden_field_tag "id", :id %>
+					<%= text_field_tag "comment[title]" %>
+					<%= text_area_tag "comment[comment]" %>
+					<%= submit_tag "Post Comment", class: "button radius" %>
+				<% end %>
+			</p>
+		<% else %>
+
+		<p><%= @article.content.slice(0..350) %>...</p>
+
+		<p><b><%= link_to "Log in", new_user_session_path %> or <%= link_to "Sign up", new_user_registration_path %> to see more content.</b></p>
+
 		<% end %>
-		</p>
-
-		<p>
-			<%= form_tag "/articles/#{@article.id}/add_new_comment" do %>
-				<%= hidden_field_tag "id", :id %>
-				<%= text_area_tag "comment[comment]" %>
-				<%= submit_tag "Post Comment" %>
-			<% end %>
-		</p>
-
-
 		
 	</div>
 	<div class="medium-4 columns">
