@@ -8,6 +8,26 @@
 		<p><%= @article.caption %></p>
 		<p>by <%= @article.author %></p>
 		<%= @article.content %>
+		<br>
+		<br>
+
+		<p>Comments:
+		<% if @article.comments %>
+			<% @article.comments.each do |comment| %>
+				<p><%= comment.comment %></p>
+			<% end %>
+		<% end %>
+		</p>
+
+		<p>
+			<%= form_tag "/articles/#{@article.id}/add_new_comment" do %>
+				<%= hidden_field_tag "id", :id %>
+				<%= text_area_tag "comment[comment]" %>
+				<%= submit_tag "Post Comment" %>
+			<% end %>
+		</p>
+
+
 		
 	</div>
 	<div class="medium-4 columns">

@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
+		@comment = @article.comments.new
 	end
 
 	def new
@@ -50,6 +51,17 @@ class ArticlesController < ApplicationController
 	end
 
 
+	def add_new_comment
+		@article = Article.find(params[:id])
+		@comment = Comment.new(comment_params)
+		@comment.user = current_user
+		@comment.save
+		@article.comments << @comment
+		redirect_to article_path(@article)
+	end
+
+
+
 	private
 
 		def set_article
@@ -58,6 +70,10 @@ class ArticlesController < ApplicationController
 
 		def article_params
 			params.require(:article).permit(:headline, :standfirst, :image, :caption, :content, :author, topic_ids:[], region_ids:[])
+		end
+
+		def comment_params
+			params.require(:comment).permit(:comment)
 		end
 
 end
