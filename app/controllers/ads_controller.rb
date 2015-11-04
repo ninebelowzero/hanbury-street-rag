@@ -6,6 +6,15 @@ class AdsController < ApplicationController
 		@ads = Ad.all
 	end
 
+	def create
+		@ad = Ad.new(ad_params)
+			if @ad.save
+				redirect_to ads_path, notice: "New ad created."
+			else
+				redirect_to ads_path, notice: @ad.errors.full_messages
+			end
+	end
+
 	def update
 		@ad.update_attributes(ad_params)
 		redirect_to ads_path, notice: "Ad updated."

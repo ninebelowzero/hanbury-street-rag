@@ -1,10 +1,9 @@
-<% i = 0 %>
+<% 3.times do %>
 
-<% Ad.all.each do |ad| %>
-  <% unless i >= 3 %>
-    <br>
-    <%= link_to (image_tag(ad.image_path, size: "310x500")), ad.link_path %>
-    <br>
-    <% i += 1 %>
-  <% end %>
+	<% ad = Ad.all.to_a.sample %>
+
+	<br>
+	<%= link_to (image_tag(ad.image_path, size: "310x500")), ad.link_path %>
+	<br>
+
 <% end %>
