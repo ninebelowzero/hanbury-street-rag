@@ -1,13 +1,10 @@
-<% if Ad.all.size > 2 %>
+<% i = 0 %>
 
-  <br>
-  <%= image_tag(Ad.all[0].image_path, size: "310x500") %>
-  <br>
-  <br>
-  <%= image_tag(Ad.all[1].image_path, size: "310x500") %>
-  <br>
-  <br>
-  <%= image_tag(Ad.all[2].image_path, size: "310x500") %>
-  <br>
-  
+<% Ad.all.each do |ad| %>
+  <% unless i >= 3 %>
+    <br>
+    <%= link_to (image_tag(ad.image_path, size: "310x500")), ad.link_path %>
+    <br>
+    <% i += 1 %>
+  <% end %>
 <% end %>
