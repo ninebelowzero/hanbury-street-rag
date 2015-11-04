@@ -24,6 +24,8 @@
 					</ul>
 			</li>
 
+			<li><%= yield(:search) %></li>
+
 			<% if user_signed_in? && current_user.role == "admin" %>
 				<li class="has-dropdown">
 					<a href="#">Editor Options</a>
