@@ -4,7 +4,7 @@
 <% content_for :search do %>
   <div class="large-8 small-9 columns">
   <%= search_form_for @search do |f| %>
-    <%= f.text_field :headline_or_standfirst_or_caption_or_content_or_author_cont, class: "radius-left expand", placeholder: "Search" %>
+    <%= f.text_field :headline_or_standfirst_or_caption_or_content_or_author_cont, class: "radius-left expand", placeholder: "Search the paper..." %>
   </div>
     <div class="large-4 small-3 columns">
       <%= f.submit "Search", class: "radius-right button" %>
