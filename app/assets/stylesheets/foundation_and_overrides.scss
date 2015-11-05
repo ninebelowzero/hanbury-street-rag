@@ -116,8 +116,9 @@ $white-smoke : #F5F5F5;
 // $black       : #000000;
 
 $cream: #FFF2DF;
+$latte: #47371D;
 // $latte: #684F28;
-$latte: #846433;
+// $latte: #846433;
 $espresso: #281E0F;
 // $espresso: #372A15;
 
@@ -1445,8 +1446,8 @@ $topbar-link-bg-hover: $latte;
 // $topbar-dropdown-bg: $espresso;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-// $topbar-dropdown-link-bg: $espresso;
-// $topbar-dropdown-link-bg-hover: $jet;
+$topbar-dropdown-link-bg: $espresso;
+$topbar-dropdown-link-bg-hover: $latte;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
