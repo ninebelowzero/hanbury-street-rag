@@ -7,22 +7,23 @@
 		<br>
 	
 		<% @ads.reverse.each do |ad| %>
-			<%= image_tag(ad.image_path, size: "310x500") %>
-			<br>
+			<%= image_tag(ad.image_path, size: "310x500", class: "ad-on-management-page") %>
+			
 		
 			<%= form_for(ad) do |f| %>
 		
+			<br>
 			<%= f.label :image_path %><br>
-			<%= f.text_field :image_path %>
+			<%= f.text_field(:image_path, class: "medium-field") %><br>
 		
 			<%= f.label :link_path %><br>
-			<%= f.text_field :link_path %>
+			<%= f.text_field(:link_path, class: "medium-field") %><br>
 		
-			<%= f.submit "Update", class: "button radius" %>
+			<%= f.submit "Update", class: "button radius medium-button" %>
 		
 			<% end %>
 		
-			<%= link_to "Remove", ad_path(ad.id), method: :delete, data: { confirm: "Are you sure  	you  want to delete this ad?" }, class: "button radius" %>
+			<%= link_to "Remove", ad_path(ad.id), method: :delete, data: { confirm: "Are you sure  	you want to delete this ad?" }, class: "button radius medium-button" %>
 			<br>
 			<hr>
 		
@@ -35,16 +36,17 @@
 	<h2>Create new ad:</h2>
 	
 	<br>
+	<br>
 	
 		<%= form_for(Ad.new) do |f| %>
 		
 			<%= f.label :image_path %><br>
 			<%= f.text_field :image_path %>
-			
+			<br>
 			<%= f.label :link_path %><br>
 			<%= f.text_field :link_path %>
-			
-			<%= f.submit "Create new ad", class: "button radius" %>
+			<br>
+			<%= f.submit "Create new ad", class: "button radius medium-button" %>
 	
 		<% end %>
 	

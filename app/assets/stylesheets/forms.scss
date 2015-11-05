@@ -28,6 +28,13 @@ input.button.radius.medium-button {
   float: right;
 }
 
+.medium-button {
+  height: 24px;
+  padding-top: 4px;
+  padding-bottom: 24px;
+  float: left;
+}
+
 .narrow-column {
   max-width: 400px;
 }
@@ -35,4 +42,15 @@ input.button.radius.medium-button {
 input.small-field {
   float: left;
   width: 200px;
+
+}
+
+input.medium-field {
+  padding-left: 6px;
+  width: 285px;
+}
+
+.ad-on-management-page {
+  float: left;
+  margin: 20px;
 }
