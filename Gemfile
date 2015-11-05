@@ -9,6 +9,7 @@ gem 'carrierwave', '0.10.0'
 gem 'rmagick'
 gem 'ransack'
 gem 'acts_as_commentable'
+gem 'fog', '1.29.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
