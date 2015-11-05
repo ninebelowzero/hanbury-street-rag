@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
 
 	before_filter :configure_permitted_parameters, if: :devise_controller?
 
+	before_filter :create_search_object
+
+	def create_search_object
+		@search = Article.search(params[:q])
+	end
+
 	protected
 
 		def configure_permitted_parameters

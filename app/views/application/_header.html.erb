@@ -24,7 +24,16 @@
 					</ul>
 			</li>
 
-			<li><%= yield(:search) %></li>
+			<li>
+			  <div class="large-8 small-9 columns">
+			  <%= search_form_for @search do |f| %>
+			    <%= f.text_field :headline_or_standfirst_or_caption_or_content_or_author_cont, class: "radius-left expand", placeholder: "Search the paper..." %>
+			  </div>
+			    <div class="large-4 small-3 columns">
+			      <%= f.submit "Search", class: "radius-right button" %>
+			    </div>
+			  <% end %>
+			</li>
 
 			<% if user_signed_in? && current_user.role == "admin" %>
 				<li class="has-dropdown">
