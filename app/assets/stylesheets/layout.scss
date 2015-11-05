@@ -12,13 +12,16 @@ h5 {
  letter-spacing: -1px;
 }
 
-.article-content {
-  font-weight: $font-weight-light;
-  font-size: 17px;
+.message-box {
+	margin: 70px;
 }
 
-.message-box {
-	margin: 20px;
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
 }
 
 .masthead {

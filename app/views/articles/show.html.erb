@@ -8,7 +8,7 @@
 			<%= image_tag(@article.image.url, size:"450x315") %>
 			<br>
 			<br>
-			<p><%= @article.caption %></p>
+			<p class="caption"><%= @article.caption %></p>
 		</div>
 		<p>by <%= @article.author %></p>
 
@@ -22,7 +22,7 @@
 
 				<% @article.comments.each do |comment| %>
 					<p><b><%= comment.title %></b></p>
-					<p><i>by <%=  (comment.user && comment.user.name) || "Anonymous" %></i></p>
+					<p class="comment-author"><i>by <%=  (comment.user && comment.user.name) || "Anonymous" %></i></p>
 					<p><%= comment.comment %></p>
 						<%= link_to("Remove", comment_path(comment.id), method: :delete, class: "button radius") if current_user.is_admin?%>
 					<hr>

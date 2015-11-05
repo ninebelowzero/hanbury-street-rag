@@ -1,4 +1,19 @@
+@import "foundation_and_overrides.scss";
+
+.article-content {
+  font-weight: $font-weight-light;
+  font-size: 17px;
+}
 
 .picture {
   padding: 10px;
+}
+
+.caption {
+  font-weight: $font-weight-normal;
+  font-size: 15px;
+}
+
+.comment-author {
+  font-weight: $font-weight-light;
 }

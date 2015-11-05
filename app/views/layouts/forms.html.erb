@@ -16,28 +16,18 @@
 
 	<body>
 
-	<%= render "header" %>
+		<%= render "header" %>
+		<%= render "debugger_box" %>
+		<%= render "masthead" %>
 
-	<%= render "debugger_box" %>
-
-	<%= render "masthead" %>
-
-
-
-	<div class="user-form">
-
-		<div class="message_box">
-			<p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
+		<div class="user-form">
+			<%= render "messages" %>
+			<%= yield %>
 		</div>
 
-		<%= yield %>
-		
-	</div>
-
-	<br>
-	<br>
-	<br>
+		<br>
+		<br>
+		<br>
 
 	</body>
 </html>
