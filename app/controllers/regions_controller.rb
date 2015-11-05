@@ -3,6 +3,7 @@ class RegionsController < ApplicationController
   before_action :set_region, only: [:show, :destroy]
 
   def show
+    @articles = Article.all.order(:updated_at).reverse
   end
 
   def destroy

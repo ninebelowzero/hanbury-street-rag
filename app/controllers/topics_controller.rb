@@ -6,6 +6,7 @@ class TopicsController < ApplicationController
   end
 
   def show
+    @articles = @articles = Article.all.order(:updated_at).reverse
   end
 
   def create
