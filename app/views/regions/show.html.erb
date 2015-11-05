@@ -6,7 +6,7 @@
 
     <h1><%= @region.name %></h1>
 
-    <% @articles.each do |article| %>
+    <% @articles[0..15].each do |article| %>
       <% if article.has_region?(@region) %>
         <%= image_tag(article.image.thumb.url, class: "thumbnail") %>
         <h4><%= link_to article.headline, article %></h4>
