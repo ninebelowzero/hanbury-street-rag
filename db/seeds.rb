@@ -12,37 +12,37 @@ require "faker"
 
 include Faker
 
-# 20.times do
-# 	article = Article.create ({ headline: Lorem.words(7, true).join(" ").capitalize,
-# 															standfirst: Lorem.sentence(8, true, 8),
-#                               caption: Lorem.sentence(12, true, 12),
-#                               author: Name.name,
-# 															content: Lorem.paragraphs(8, true).join("\n"),
-# 												
-# 	})
-# 	p article.inspect
-# end
+20.times do
+	article = Article.create ({ headline: Lorem.words(7, true).join(" ").capitalize,
+															standfirst: Lorem.sentence(8, true, 8),
+															caption: Lorem.sentence(12, true, 12),
+															author: Name.name,
+															content: Lorem.paragraphs(8, true).join("\n"),
+												
+	})
+	p article.inspect
+end
 
-# 10.times do
-# 	ad = Ad.create ({ image_path: "http://placehold.it/310x500"
+10.times do
+	ad = Ad.create ({ image_path: "http://placehold.it/310x500"
 
-# 	})
-# 	# p ad.inspect
-# end
+	})
+	# p ad.inspect
+end
 
 
-# topic = Topic.create ({ name: "Politics" })
-# topic = Topic.create ({ name: "Culture" })
-# topic = Topic.create ({ name: "Opinion" })
-# topic = Topic.create ({ name: "Science" })
-# topic = Topic.create ({ name: "Business" })
-# topic = Topic.create ({ name: "Sport" })
+topic = Topic.create ({ name: "Politics" })
+topic = Topic.create ({ name: "Culture" })
+topic = Topic.create ({ name: "Opinion" })
+topic = Topic.create ({ name: "Science" })
+topic = Topic.create ({ name: "Business" })
+topic = Topic.create ({ name: "Sport" })
 
-# region = Region.create ({ name: "UK" })
-# region = Region.create ({ name: "Europe" })
-# region = Region.create ({ name: "Americas" })
-# region = Region.create ({ name: "Africa & Middle East" })
-# region = Region.create ({ name: "Asia-Pacific" })
+region = Region.create ({ name: "UK" })
+region = Region.create ({ name: "Europe" })
+region = Region.create ({ name: "Americas" })
+region = Region.create ({ name: "Africa & Middle East" })
+region = Region.create ({ name: "Asia-Pacific" })
 
 
 
