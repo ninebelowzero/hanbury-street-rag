@@ -7,9 +7,11 @@
 
 <div class="medium-8 columns">
 
-<%= image_tag(@articles[0].image.url, size: "450x315", class: "picture") %>
-<h4><%= link_to @articles[0].headline, @articles[0] %></h4>
-<h5><%= @articles[0].standfirst %></h5>
+<div class="picture">
+	<%= image_tag(@articles[0].image.url, size: "450x315") %>
+	<h4><%= link_to @articles[0].headline, @articles[0] %></h4>
+	<h5><%= @articles[0].standfirst %></h5>
+</div>
 
 	<div class="medium-6 columns">
 		<% @articles[1..7].each do |article| %>

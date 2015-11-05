@@ -24,7 +24,7 @@
 					<p><b><%= comment.title %></b></p>
 					<p class="comment-author"><i>by <%=  (comment.user && comment.user.name) || "Anonymous" %></i></p>
 					<p><%= comment.comment %></p>
-						<%= link_to("Remove", comment_path(comment.id), method: :delete, class: "button radius") if current_user.is_admin?%>
+						<%= link_to("Remove", comment_path(comment.id), method: :delete, class: "button radius small-button") if current_user.is_admin?%>
 					<hr>
 				<% end %>
 

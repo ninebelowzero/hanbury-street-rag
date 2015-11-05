@@ -1,56 +1,57 @@
 .user-form {
-  max-width: 500px;
-  margin: 0 auto;
+	max-width: 500px;
+	margin: 0 auto;
 }
 
 .content-area {
-  height: 500px;
+	height: 500px;
 }
 
 .category-title {
-  font-weight: 700;
-  font-size: 18px;
-  float: left;
+	font-weight: 700;
+	font-size: 18px;
+	float: left;
 }
 
-a.button.radius.category-button {
-  border-radius: 50px;
-  height: 20px;
-  padding-top: 4px;
-  padding-bottom: 24px;
-  float: right;
+a.button.radius.small-button {
+	border-radius: 50px;
+	height: 20px;
+	padding-top: 4px;
+	padding-bottom: 24px;
+	float: right;
 }
 
 input.button.radius.medium-button {
-  height: 24px;
-  padding-top: 4px;
-  padding-bottom: 24px;
-  float: right;
+	height: 24px;
+	padding-top: 4px;
+	padding-bottom: 24px;
+	float: right;
 }
 
 .medium-button {
-  height: 24px;
-  padding-top: 4px;
-  padding-bottom: 24px;
-  float: left;
+	height: 24px;
+	padding-top: 4px;
+	padding-bottom: 24px;
+	float: left;
 }
 
 .narrow-column {
-  max-width: 400px;
+	max-width: 400px;
 }
 
 input.small-field {
-  float: left;
-  width: 200px;
+	float: left;
+	width: 200px;
 
 }
 
 input.medium-field {
-  padding-left: 6px;
-  width: 285px;
+	padding-left: 6px;
+	width: 285px;
 }
 
 .ad-on-management-page {
-  float: left;
-  margin: 20px;
+	float: left;
+	margin: 20px;
 }
+
