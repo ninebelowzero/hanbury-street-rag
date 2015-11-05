@@ -115,8 +115,12 @@ $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
 
+$cream: #FFF2DF;
+$espresso: #281E0F;
+// $espresso: #372A15;
+
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: $espresso;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -124,7 +128,7 @@ $oil         : #333333;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
-$body-bg: $white-smoke;
+$body-bg: $cream;
 // $body-font-color: $jet;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -1403,7 +1407,7 @@ $body-bg: $white-smoke;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $oil;
+$topbar-bg-color: $espresso;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
