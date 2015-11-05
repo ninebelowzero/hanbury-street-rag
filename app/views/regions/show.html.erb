@@ -6,14 +6,16 @@
 
     <h1><%= @region.name %></h1>
 
-    <% Article.all.each do |article| %>
-      <% if article.region_ids.include?(@region.id) %>
-        <%= image_tag(article.image.thumb.url) %>
+    <% @articles.each do |article| %>
+      <% if article.has_region?(@region) %>
+        <%= image_tag(article.image.thumb.url, class: "thumbnail") %>
         <h4><%= link_to article.headline, article %></h4>
         <p><%= article.standfirst %></p>
+        <br>
       <% end %>
     <% end %>
   </div>
+
 
   <div class="medium-4 columns">
     <%= render "ads" %>

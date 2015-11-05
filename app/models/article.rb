@@ -6,4 +6,13 @@ class Article < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   acts_as_commentable
+
+  def has_topic?(topic)
+    topic_ids.include? topic.id
+  end
+
+  def has_region?(region)
+    region_ids.include? region.id
+  end
+
 end
