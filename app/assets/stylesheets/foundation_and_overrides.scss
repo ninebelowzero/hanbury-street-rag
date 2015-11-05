@@ -111,11 +111,13 @@ $white-smoke : #F5F5F5;
 // $steel       : #666666;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
-$oil         : #333333;
+// $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
 
 $cream: #FFF2DF;
+// $latte: #684F28;
+$latte: #846433;
 $espresso: #281E0F;
 // $espresso: #372A15;
 
@@ -262,7 +264,7 @@ $body-bg: $cream;
 // $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
-// $code-color: $oil;
+// $code-color: $espresso;
 // $code-font-family: $font-family-monospace;
 // $code-font-weight: $font-weight-normal;
 // $code-background-color: scale-color($secondary-color, $lightness: 70%);
@@ -375,7 +377,7 @@ $body-bg: $cream;
 // $alert-bottom-margin: rem-calc(20);
 
 // We use these to style the close buttons
-// $alert-close-color: $oil;
+// $alert-close-color: $espresso;
 // $alert-close-top: 50%;
 // $alert-close-position: rem-calc(4);
 // $alert-close-font-size: rem-calc(22);
@@ -428,7 +430,7 @@ $body-bg: $cream;
 // We use these to set various text styles for breadcrumbs.
 // $crumb-font-size: rem-calc(11);
 // $crumb-font-color: $primary-color;
-// $crumb-font-color-current: $oil;
+// $crumb-font-color-current: $espresso;
 // $crumb-font-color-unavailable: $aluminum;
 // $crumb-font-transform: uppercase;
 // $crumb-link-decor: underline;
@@ -456,7 +458,7 @@ $body-bg: $cream;
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
 // $button-font-color: $white;
-// $button-font-color-alt: $oil;
+// $button-font-color-alt: $espresso;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
 // $button-font-med: rem-calc(16);
@@ -507,7 +509,7 @@ $body-bg: $cream;
 // $include-html-clearing-classes: $include-html-classes;
 
 // We use these to set the background colors for parts of Clearing.
-// $clearing-bg: $oil;
+// $clearing-bg: $espresso;
 // $clearing-caption-bg: $clearing-bg;
 // $clearing-carousel-bg: rgba(51,51,51,0.8);
 // $clearing-img-bg: $clearing-bg;
@@ -589,7 +591,7 @@ $body-bg: $cream;
 
 // We use these to set the color of the pip in dropdown buttons
 // $dropdown-button-pip-color: $white;
-// $dropdown-button-pip-color-alt: $oil;
+$dropdown-button-pip-color-alt: $espresso;
 
 // We use these to set the size of the pip in dropdown buttons
 // $button-pip-tny: rem-calc(6);
@@ -684,7 +686,7 @@ $body-bg: $cream;
 // $input-prefix-border-size: 1px;
 // $input-prefix-border-type: solid;
 // $input-prefix-overflow: hidden;
-// $input-prefix-font-color: $oil;
+// $input-prefix-font-color: $espresso;
 // $input-prefix-font-color-alt: $white;
 
 // We use this setting to turn on/off HTML5 number spinners (the up/down arrows)
@@ -698,7 +700,7 @@ $body-bg: $cream;
 // $input-error-message-font-style: italic;
 // $input-error-message-font-color: $white;
 // $input-error-message-bg-color: $alert-color;
-// $input-error-message-font-color-alt: $oil;
+// $input-error-message-font-color-alt: $espresso;
 
 // We use this to style the glowing effect of inputs when focused
 // $glowing-effect-fade-time: .45s;
@@ -717,7 +719,7 @@ $body-bg: $cream;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to style the icon-bar and items
-// $icon-bar-bg: $oil;
+$icon-bar-bg: $espresso;
 // $icon-bar-font-color: $white;
 // $icon-bar-font-color-hover: $icon-bar-font-color;
 // $icon-bar-font-size: 1rem;
@@ -762,7 +764,7 @@ $body-bg: $cream;
 // $include-html-joyride-classes: $include-html-classes;
 
 // Controlling default Joyride styles
-// $joyride-tip-bg: $oil;
+// $joyride-tip-bg: $espresso;
 // $joyride-tip-default-width: 300px;
 // $joyride-tip-padding: rem-calc(18 20 24);
 // $joyride-tip-border: solid 1px $charcoal;
@@ -824,7 +826,7 @@ $body-bg: $cream;
 // We use these to style the label text
 // $label-font-sizing: rem-calc(11);
 // $label-font-weight: $font-weight-normal;
-// $label-font-color: $oil;
+// $label-font-color: $espresso;
 // $label-font-color-alt: $white;
 // $label-font-family: $body-font-family;
 
@@ -842,7 +844,7 @@ $body-bg: $cream;
 // Off Canvas Tab Bar Variables
 // $include-html-off-canvas-classes: $include-html-classes;
 
-// $tabbar-bg: $oil;
+// $tabbar-bg: $espresso;
 // $tabbar-height: rem-calc(45);
 // $tabbar-icon-width: $tabbar-height;
 // $tabbar-line-height: $tabbar-height;
@@ -862,7 +864,7 @@ $body-bg: $cream;
 
 // Off Canvas Menu Variables
 // $off-canvas-width: rem-calc(250);
-// $off-canvas-bg: $oil;
+// $off-canvas-bg: $espresso;
 // $off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
 // $off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
 
@@ -1006,7 +1008,7 @@ $body-bg: $cream;
 // $panel-padding: rem-calc(20);
 
 // We use these to set default font colors
-// $panel-font-color: $oil;
+// $panel-font-color: $espresso;
 // $panel-font-color-alt: $white;
 
 // $panel-header-adjust: true;
@@ -1025,7 +1027,7 @@ $body-bg: $cream;
 // $price-table-margin-bottom: rem-calc(20);
 
 // We use these to control the title styles
-// $price-title-bg: $oil;
+// $price-title-bg: $espresso;
 // $price-title-padding: rem-calc(15 20);
 // $price-title-align: center;
 // $price-title-color: $smoke;
@@ -1037,7 +1039,7 @@ $body-bg: $cream;
 // $price-money-bg: $vapor;
 // $price-money-padding: rem-calc(15 20);
 // $price-money-align: center;
-// $price-money-color: $oil;
+// $price-money-color: $espresso;
 // $price-money-weight: $font-weight-normal;
 // $price-money-size: rem-calc(32);
 // $price-money-font-family: $body-font-family;
@@ -1054,7 +1056,7 @@ $body-bg: $cream;
 // $price-desc-bottom-border: dotted 1px $gainsboro;
 
 // We use these to control the list item styles
-// $price-item-color: $oil;
+// $price-item-color: $espresso;
 // $price-item-padding: rem-calc(15);
 // $price-item-align: center;
 // $price-item-font-size: rem-calc(14);
@@ -1209,7 +1211,7 @@ $body-bg: $cream;
 // $split-button-function-factor: 10%;
 // $split-button-pip-color: $white;
 // $split-button-span-border-color: rgba(255,255,255,0.5);
-// $split-button-pip-color-alt: $oil;
+// $split-button-pip-color-alt: $espresso;
 // $split-button-active-bg-tint: rgba(0,0,0,0.1);
 
 // We use these to control tiny split buttons
@@ -1381,13 +1383,13 @@ $body-bg: $cream;
 
 // $has-tip-border-bottom: dotted 1px $iron;
 // $has-tip-font-weight: $font-weight-bold;
-// $has-tip-font-color: $oil;
+// $has-tip-font-color: $espresso;
 // $has-tip-border-bottom-hover: dotted 1px scale-color($primary-color, $lightness: -55%);
 // $has-tip-font-color-hover: $primary-color;
 // $has-tip-cursor-type: help;
 
 // $tooltip-padding: rem-calc(12);
-// $tooltip-bg: $oil;
+// $tooltip-bg: $espresso;
 // $tooltip-font-size: rem-calc(14);
 // $tooltip-font-weight: $font-weight-normal;
 // $tooltip-font-color: $white;
@@ -1427,8 +1429,8 @@ $topbar-bg-color: $espresso;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-hover: $jet;
-// $topbar-link-bg-color-hover: $charcoal;
+$topbar-link-bg-hover: $latte;
+// $topbar-link-bg-color-hover: red;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
@@ -1440,10 +1442,10 @@ $topbar-bg-color: $espresso;
 // $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
+// $topbar-dropdown-bg: $espresso;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-// $topbar-dropdown-link-bg: $oil;
+// $topbar-dropdown-link-bg: $espresso;
 // $topbar-dropdown-link-bg-hover: $jet;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
@@ -1454,7 +1456,7 @@ $topbar-bg-color: $espresso;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: $oil;
+// $topbar-dropdown-label-bg: $espresso;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;

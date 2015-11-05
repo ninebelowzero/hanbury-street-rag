@@ -1,3 +1,4 @@
+@import "foundation_and_overrides.scss";
 
 .message-box {
 	margin: 20px;
@@ -21,3 +22,9 @@
 // div {
 //   border: 2px solid pink;
 // }
+
+div.large-8.small-9.columns, div.large-4.small-3.columns {
+  background: $espresso;
+}
+
+
