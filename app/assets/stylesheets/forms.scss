@@ -6,3 +6,33 @@
 .content-area {
   height: 500px;
 }
+
+.category-title {
+  font-weight: 700;
+  font-size: 18px;
+  float: left;
+}
+
+a.button.radius.category-button {
+  border-radius: 50px;
+  height: 20px;
+  padding-top: 4px;
+  padding-bottom: 24px;
+  float: right;
+}
+
+input.button.radius.medium-button {
+  height: 24px;
+  padding-top: 4px;
+  padding-bottom: 24px;
+  float: right;
+}
+
+.narrow-column {
+  max-width: 400px;
+}
+
+input.small-field {
+  float: left;
+  width: 200px;
+}
