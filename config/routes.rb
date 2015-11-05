@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {sessions: "sessions", registrations: "registrations" }
   root "articles#index"
 
-  post "/articles/:id/add_new_comment", to: "articles#add_new_comment"
+  post "/articles/:id/add_new_comment", to: "articles#add_new_comment", as: :article_new_comment
+  resources :comments, only: :destroy
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

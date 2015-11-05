@@ -15,14 +15,15 @@
 			<br>
 	
 			<p>
-			<% if @article.comments.count > 0 %>
+			<% if @article.comments %>
 			<b><%= @article.comments.count %> comments:</b>
 
 				<% @article.comments.each do |comment| %>
 					<p><b><%= comment.title %></b></p>
-					<%# writer = comment.user_id %>
-					<p><i>by <%#= User.find_by(id: writer.to_i).username %></i></p>
+					<p><i>by <%=  (comment.user && comment.user.name) || "Anonymous" %></i></p>
 					<p><%= comment.comment %></p>
+					<p><%= comment.id %></p>
+						<%= link_to("Remove", comment_path(comment.id), method: :delete, class: "button radius") if current_user.is_admin?%>
 					<hr>
 				<% end %>
 
@@ -33,13 +34,18 @@
 			</p>
 	
 			<p>
-				<%= form_tag "/articles/#{@article.id}/add_new_comment" do %>
+				<%= form_tag article_new_comment_path(@article) do %>
 					<%= hidden_field_tag "id", :id %>
 					<%= text_field_tag "comment[title]" %>
 					<%= text_area_tag "comment[comment]" %>
 					<%= submit_tag "Post Comment", class: "button radius" %>
 				<% end %>
 			</p>
+
+
+
+
+
 		<% else %>
 
 		<p><%= @article.content.slice(0..350) %>...</p>
