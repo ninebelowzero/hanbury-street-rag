@@ -119,12 +119,14 @@ $jet         : #222222;
 
 $cream: #FFF2DF;
 $condensed-milk: #FFDFAF;
-$cinnamon: #997948;
+$cinnamon: #745C36;
+// $cinnamon: #836941;
+// $cinnamon: #997948;
 $latte: #47371D;
 $espresso: #281E0F;
 
 // We use these as default colors throughout
-$primary-color: $espresso;
+$primary-color: $latte;
 $secondary-color: $cream;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -472,9 +474,9 @@ $header-font-weight: $font-weight-normal;
 // $button-function-factor: -20%;
 
 // We use these to control button border styles.
-// $button-border-width: 0;
-// $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-border-width: 2px;
+$button-border-style: outset;
+$button-bg-color: $cinnamon;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
