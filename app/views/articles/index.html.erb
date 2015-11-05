@@ -9,43 +9,30 @@
 
 <%= image_tag(@articles[0].image.url, size: "450x315") %>
 <h4><%= link_to @articles[0].headline, @articles[0] %></h4>
-<h5><%= @articles[0] %></h5>
-<br>
+<h5><%= @articles[0].standfirst %></h5>
 
-  <div class="medium-6 columns">
-
-  	<% i = 0 %> 
-		<% @articles.reverse.each do |article| %>
-				<% unless i > 7 %>		
-					<h4><%= link_to article.headline, article %></h4>
-          <%= image_tag(article.image.thumb.url, class: "thumbnail") %>
-					<p><%= article.standfirst %></p>
-				<% end %>
-			<% i += 1 %>
+	<div class="medium-6 columns">
+		<% @articles[1..7].each do |article| %>
+				<br>
+				<h4><%= link_to article.headline, article %></h4>
+				<%= image_tag(article.image.thumb.url, class: "thumbnail") %>
+				<p><%= article.standfirst %></p>
 		<% end %>
 	</div>
 
 	<div class="medium-6 columns">
-	
-  	<% i = 0 %> 
-		<% @articles.each do |article| %>
-				<% unless i > 7 %>		
-					<%= image_tag(article.image.thumb.url) %>
-					<h4><%= link_to article.headline, article %></h4>
-					<p><%= article.standfirst %></p>
-				<% end %>
-			<% i += 1 %>
+		<% @articles[8..14].each do |article| %>
+				<br>
+				<h4><%= link_to article.headline, article %></h4>
+				<%= image_tag(article.image.thumb.url, class: "thumbnail") %>
+				<p><%= article.standfirst %></p>
 		<% end %>
 	</div>
-
-
 
 </div>
 
 	<div class="medium-4 columns">
-
 		<%= render "ads" %>
-
 	</div>
 
 </div>

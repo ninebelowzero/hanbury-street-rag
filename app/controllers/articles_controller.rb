@@ -6,8 +6,8 @@ class ArticlesController < ApplicationController
 
 
 	def index
-		@articles = Article.all
-		@articles = @search.result
+		@articles = Article.all.order(:updated_at).reverse
+		@articles = @search.result.order(:updated_at).reverse
 		# @top_article = Article.first
 	end
 
