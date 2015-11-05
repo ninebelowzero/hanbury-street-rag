@@ -8,14 +8,12 @@
 			<%= image_tag(@article.image.url, size:"450x315") %>
 			<br>
 			<br>
-		<p><%= @article.caption %></p>
+			<p><%= @article.caption %></p>
 		</div>
 		<p>by <%= @article.author %></p>
 
 		<% if user_signed_in? %>
-
-			<%= add_line_breaks @article.content %>
-			<br>
+		<p class="article-content"><%= add_line_breaks @article.content %></p>
 			<br>
 	
 			<p>
@@ -50,8 +48,8 @@
 
 
 		<% else %>
-
-		<p><%= @article.content.slice(0..350) %>...</p>
+		 
+		<p class="article-content"><%= add_line_breaks @article.content.slice(0..350) %>...</p>
 
 		<p><b><%= link_to "Log in", new_user_session_path %> or <%= link_to "Sign up", new_user_registration_path %> to see more content.</b></p>
 
