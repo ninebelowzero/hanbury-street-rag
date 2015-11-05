@@ -17,8 +17,8 @@ include Faker
 															standfirst: Lorem.sentence(8, true, 8),
 															caption: Lorem.sentence(12, true, 12),
 															author: Name.name,
-															content: Lorem.paragraphs(8, true).join("\n"),
-												
+															content: Lorem.paragraphs(8, true).join("\n")
+
 	})
 	p article.inspect
 end

@@ -16,9 +16,9 @@
 
 <div class="medium-8 columns">
 
-<%= image_tag(@top_article.image.url, size: "450x315") %>
-<h4><%= link_to @top_article.headline, @top_article %></h4>
-<h5><%= @top_article.standfirst %></h5>
+<%= image_tag(Article.first.image.url, size: "450x315") %>
+<h4><%= link_to Article.first.headline, Article.first %></h4>
+<h5><%= Article.first.standfirst %></h5>
 
   <div class="medium-6 columns">
 
