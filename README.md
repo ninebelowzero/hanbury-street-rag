@@ -5,7 +5,7 @@
 ------------------------
 
 
-This project is live on [Heroku](https://blooming-garden-8969.herokuapp.com) and [Github](https://github.com/ninebelowzero/Project-2) as of Nov 5 2015.
+This project is live on [Heroku](https://blooming-garden-8969.herokuapp.com) as of Nov 5 2015. History is available on [Github](https://github.com/ninebelowzero/Project-2).
 
 --------------------------
 
