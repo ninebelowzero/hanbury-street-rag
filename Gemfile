@@ -2,14 +2,15 @@ source 'https://rubygems.org'
 
 # My custom gems:
 
-gem 'devise'
-gem 'foundation-rails'
-gem 'faker'
-gem 'carrierwave', '0.10.0'
-gem 'rmagick'
-gem 'ransack'
 gem 'acts_as_commentable'
+gem 'carrierwave', '0.10.0'
+gem 'devise'
+gem 'faker'
 gem 'fog', '1.29.0'
+gem 'foundation-rails'
+gem 'ransack'
+gem 'rmagick'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
